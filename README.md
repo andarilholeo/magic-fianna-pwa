@@ -3,14 +3,16 @@
 Um aplicativo feito com Angular para sortear efeitos aleatórios em partidas de Magic: The Gathering, usando cartas da caixa de sapato! 😄✨  
 Cada rodada, o app sorteia um evento com base em pesos definidos em um JSON — como criar fichas de tesouro, descartar cartas, ou até invocar dragões! 🐉
 
-## 🛠️ Tecnologias
-- Angular 19
-- Bootstrap 5
-- PWA (Progressive Web App)
+## 🛠️ Tecnologias Utilizadas
+
+- [Angular 19](https://angular.io/)
+- [Bootstrap 5](https://getbootstrap.com/)
+- [PWA - Progressive Web App](https://web.dev/progressive-web-apps/)
+- Typescript / HTML / CSS
 
 ---
 
-## 🚀 Como rodar o projeto
+## 🚀 Como rodar o projeto localmente
 
 ### 1. Clone o repositório
 ```bash
