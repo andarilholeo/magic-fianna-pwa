@@ -1,32 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { EventoService, Evento } from '../evento.service';
 
 @Component({
   selector: 'app-home',
-  standalone: true,
+  imports: [CommonModule],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
-  imports: [CommonModule]
+  styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
 
-  eventos = [
-    { nome: 'Criar 1 ficha de Tesouro', peso: 30 },
-    { nome: 'Descarta e compra', peso: 25 },
-    { nome: 'Sacrificar criatura', peso: 10 },
-    { nome: 'Dragãozão', peso: 5 }
-  ];
+export class HomeComponent implements OnInit {
+  eventos: Evento[] = [];
+  resultadoSorteio: Evento | null = null;
 
-  sorteio() {
-    const totalPeso = this.eventos.reduce((soma, ev) => soma + ev.peso, 0);
+  constructor(private eventoService: EventoService) {}
+
+  ngOnInit(): void {
+    this.eventoService.getEventos().subscribe(data => {
+      this.eventos = data;
+    });
+  }
+
+  sorteio(): void {
+    if (!this.eventos.length) return;
+    const totalPeso = this.eventos.reduce((s, ev) => s + ev.peso, 0);
     const rand = Math.random() * totalPeso;
     let acumulado = 0;
-    
+
     for (const ev of this.eventos) {
       acumulado += ev.peso;
-      if (rand < acumulado) return ev;
+      if (rand < acumulado) {
+        this.resultadoSorteio = ev;
+        return;
+      }
     }
-    
-    return this.eventos[0];
+    this.resultadoSorteio = this.eventos[0];
   }
 }
