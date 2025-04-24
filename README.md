@@ -16,17 +16,18 @@ Cada rodada, o app sorteia um evento com base em pesos definidos em um JSON — 
 ```bash
 git clone https://github.com/andarilholeo/magic-fianna-pwa.git
 cd magic-fianna-pwa
+```
 
-2. Instale as dependências
-bash
-Copiar
-Editar
+### 2. Instale as dependências
+
+```bash
 npm install
+```
 
-3. Rode o projeto
-bash
-Copiar
-Editar
+### 3. Rode o projeto
+```bash
 ng serve
+```
+
 Acesse http://localhost:4200 no navegador.
 
