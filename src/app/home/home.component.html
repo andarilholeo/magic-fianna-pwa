@@ -1,0 +1,11 @@
+<div class="container mt-5">
+    <h1 class="text-center">Sorteio de Efeitos Magic</h1>
+    <div class="d-flex justify-content-center mt-4">
+      <button class="btn btn-primary" (click)="sorteio()">
+        Sorteiar Evento
+      </button>
+    </div>
+    <div class="mt-4 text-center">
+      <h4 *ngIf="sorteio()">Evento Sorteado: {{ sorteio().nome }}</h4>
+    </div>
+</div>
