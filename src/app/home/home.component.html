@@ -1,0 +1,24 @@
+<div class="container mt-5">
+  <h1 class="text-center">Sorteio de Efeitos Magic</h1>
+
+  <div class="d-flex justify-content-center mt-4">
+    <button class="btn btn-primary" (click)="sorteio()">
+      Sortear Evento
+    </button>
+  </div>
+
+  <div class="mt-4 text-center" *ngIf="resultadoSorteio">
+    <h4>Evento Sorteado:</h4>
+    <div class="card mx-auto" style="width: 18rem;">
+      <img
+        [src]="resultadoSorteio.imagemUrl"
+        class="card-img-top"
+        alt="{{ resultadoSorteio.nome }}"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ resultadoSorteio.nome }}</h5>
+        <p class="card-text">{{ resultadoSorteio.descricao }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="container mt-4">
+    <h2>Adicionar Novo Evento</h2>
+    <form (ngSubmit)="onSubmit()" #formEvento="ngForm">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input
+          type="text"
+          id="nome"
+          class="form-control"
+          required
+          [(ngModel)]="modelo.nome"
+          name="nome"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="descricao" class="form-label">Descrição</label>
+        <textarea
+          id="descricao"
+          class="form-control"
+          required
+          [(ngModel)]="modelo.descricao"
+          name="descricao"
+        ></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="peso" class="form-label">Peso</label>
+        <input
+          type="number"
+          id="peso"
+          class="form-control"
+          required
+          min="1"
+          [(ngModel)]="modelo.peso"
+          name="peso"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="imagemUrl" class="form-label">URL da Imagem</label>
+        <input
+          type="text"
+          id="imagemUrl"
+          class="form-control"
+          required
+          [(ngModel)]="modelo.imagemUrl"
+          name="imagemUrl"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="formEvento.invalid">
+        Adicionar
+      </button>
+    </form>
+</div>
+  
