@@ -1,0 +1,26 @@
+[
+    {
+      "nome": "Tesouros de Uabhnach",
+      "descricao": "Cada jogador: Cria uma ficha de tesouro",
+      "peso": 30,
+      "imagemUrl": "assets/imagens/tesouro_de_uabhnach.png"
+    },
+    {
+      "nome": "Loucura de Uabhnach",
+      "descricao": "Cada jogador: compra um card e depois descarta um cards.",
+      "peso": 25,
+      "imagemUrl": "assets/imagens/loucura_de_uabhnach.png"
+    },
+    {
+      "nome": "Sacrificio de Uabhnach",
+      "descricao": "Cada jogador: sacrifica uma criatura",
+      "peso": 10,
+      "imagemUrl": "assets/imagens/sacrificio_de_uabhnach.png"
+    },
+    {
+      "nome": "Pavor de Uabhnach",
+      "descricao": "Cada jogador: cria uma ficha de Demônio 6/6",
+      "peso": 5,
+      "imagemUrl": "assets/imagens/pavor.png"
+    }
+  ]
